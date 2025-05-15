@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script type="module" src="https://fastly.jsdelivr.net/npm/barcode-detector@3/dist/es/polyfill.min.js"></script>
+    <script defer src="./index.js"></script>
+    <link rel="stylesheet" href="./index.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>dpi: <span id="dpi"></span> canvas w/h: <span id="canvas-w-h"></span></p>
+    <p>detectCount: <span id="detect-count"></span></p>
+    <p>detectSuccessCount: <span id="detect-success-count"></span></p>
+    <p>result: <span id="result"></span></p>
+
+    <!-- method -->
+    <div class="method-container">
+      <input type="checkbox" id="checkbox-grayscale" checked />
+      <label for="checkbox-grayscale">灰階</label>
+      <input type="checkbox" id="checkbox-contrast-enhancement" checked />
+      <label for="checkbox-contrast-enhancement">對比度增強</label>
+      <input type="checkbox" id="checkbox-binarization" checked />
+      <label for="checkbox-binarization">二值化</label>
+    </div>
+
+    <!-- display -->
+    <video id="video" muted autoplay="false" playsinline></video>
+    <canvas id="canvas"></canvas>
+  </body>
+</html>
