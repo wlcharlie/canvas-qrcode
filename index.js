@@ -32,9 +32,14 @@ async function fixDpi() {
   const canvasWHSpan = document.getElementById("canvas-w-h")
   canvasWHSpan.textContent = `${style.width()}x${style.height()}`
 
+  let _dpi = 1
+  if (!document.getElementById("checkbox-dip-fix").checked) {
+    _dpi = dpi
+  }
+
   //set the correct attributes for a crystal clear image!
-  canvas.setAttribute("width", style.width() * dpi)
-  canvas.setAttribute("height", style.height() * dpi)
+  canvas.setAttribute("width", style.width() * _dpi)
+  canvas.setAttribute("height", style.height() * _dpi)
 }
 
 // request camera permission
