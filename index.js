@@ -33,7 +33,7 @@ async function fixDpi() {
   canvasWHSpan.textContent = `${style.width()}x${style.height()}`
 
   let _dpi = 1
-  if (!document.getElementById("checkbox-dip-fix").checked) {
+  if (document.getElementById("checkbox-dip-fix").checked) {
     _dpi = dpi
   }
 
